@@ -3,7 +3,7 @@ version: "2.0"
 
 services:
   app:
-    image: dimokus88/ubuntu:1.1
+    image: dimokus88/ubuntu:1.3
     env:
       - "MY_ROOT_PASSWORD=" # Root password far a ssh connection. Пароль root для подключения по ssh.
       - "MONIKER=Akash" # Node name.Имя ноды.
