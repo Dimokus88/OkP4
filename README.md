@@ -70,7 +70,7 @@ curl -s localhost:26657/status | jq .result.sync_info.catching_up
 If the node is **synchronized** - run:
 
 ```
-source ~/.bashrc && wget -q -O $binary.sh https://raw.githubusercontent.com/Dimokus88/universe/main/script/create_validator.sh && chmod +x $binary.sh && sudo /bin/bash $binary.sh
+source ~/.bashrc && wget -q -O $BINARY.sh https://raw.githubusercontent.com/Dimokus88/universe/main/script/create_validator.sh && chmod +x $BINARY.sh && sudo /bin/bash $BINARY.sh
 ```
 
 Follow the script execution prompts.
@@ -78,19 +78,19 @@ Follow the script execution prompts.
 When the validator is created, request the remaining balance:
 
 ```
-$binary q bank balances $address
+$BINARY q bank balances $address
 ```
 
 You can delegate the remaining tokens to yourself, but leave 1,000,000 uknow to pay for transaction gas:
 
 ```
-$binary tx staking delegate $valoper <amount>$DENOM --from $address --chain-id $CHAIN --fees 555$DENOM -y
+$BINARY tx staking delegate $valoper <amount>$DENOM --from $address --chain-id $CHAIN --fees 555$DENOM -y
 ```
 
 Collect rewards:
 
 ```
-$binary tx distribution withdraw-rewards $valoper --from $address --fees 500$DENOM --commission --chain-id $CHAIN -y
+$BINARY tx distribution withdraw-rewards $valoper --from $address --fees 500$DENOM --commission --chain-id $CHAIN -y
 ```
 Other commands for managing a node [can be found here](https://github.com/Dimokus88/guides/blob/main/Cosmos%20SDK/COMMAND.MD).
 
@@ -137,7 +137,7 @@ curl -s localhost:26657/status | jq .result.sync_info.catching_up
 Если нода **синхронизированна** - выполните:
 
 ```
-source ~/.bashrc && wget -q -O $binary.sh https://raw.githubusercontent.com/Dimokus88/universe/main/script/create_validator.sh && chmod +x $binary.sh && sudo /bin/bash $binary.sh
+source ~/.bashrc && wget -q -O $BINARY.sh https://raw.githubusercontent.com/Dimokus88/universe/main/script/create_validator.sh && chmod +x $BINARY.sh && sudo /bin/bash $BINARY.sh
 ```
 
 Следуйте подсказкам выполнения скрипта.
@@ -145,19 +145,19 @@ source ~/.bashrc && wget -q -O $binary.sh https://raw.githubusercontent.com/Dimo
 Когда валидатор будет создан запросите оставшийся баланс:
 
 ```
-$binary q bank balances $address
+$BINARY q bank balances $address
 ```
 
 Можете делегировать на себя оставшиеся токены, но оставьте 1 000 000 uknow для оплаты газа транзакций:
 
 ```
-$binary tx staking delegate $valoper <amount>$denom --from $address --chain-id $CHAIN --fees 555$DENOM -y
+$BINARY tx staking delegate $valoper <amount>$DENOM --from $address --chain-id $CHAIN --fees 555$DENOM -y
 ```
 
 * Собрать награды:
 
 ```
-$binary tx distribution withdraw-rewards $valoper --from $address --fees 500$DENOM --commission --chain-id $CHAIN -y
+$BINARY tx distribution withdraw-rewards $valoper --from $address --fees 500$DENOM --commission --chain-id $CHAIN -y
 ```
 Другие команды по управлению нодой [можете найти здесь](https://github.com/Dimokus88/guides/blob/main/Cosmos%20SDK/COMMAND.MD).
 
